@@ -5,11 +5,16 @@
  */
 package poo3;
 
+import java.util.Date;
 import java.util.Scanner;
+import poo3.objetos.Persona;
 import poo3.objetos.Cadena;
 import poo3.objetos.ParDeNumeros;
 import poo3.servicios.CadenaServicio;
 import poo3.servicios.ParDeNumerosService;
+import poo3.servicios.ArregloServicio;
+import poo3.servicios.FechaService;
+import poo3.servicios.PersonaService;
 
 /**
  *
@@ -59,12 +64,36 @@ public class POO3 {
             break;
         }           
         } while (opcion!=8);*/
-        ParDeNumerosService servicio = new ParDeNumerosService ();
+        /*ParDeNumerosService servicio = new ParDeNumerosService ();
         ParDeNumeros nuevo = new ParDeNumeros();
         servicio.mostrarValores(nuevo);
         double mayor = servicio.devolverMayor(nuevo);
         double menor = servicio.calcularPotencia(nuevo, mayor);
-        servicio.calculaRaiz(menor);
+        servicio.calculaRaiz(menor);*/
+        
+        //Crear en el Main dos arreglos. El arreglo A de 50 números reales y el arreglo B de 20 números reales.
+        
+        /*double [] A = new double [50];
+        double [] B = new double [20];
+        ArregloServicio servicio = new ArregloServicio ();
+        servicio.inicializarA(A);
+        servicio.mostrar(A);
+        servicio.ordenar(A);
+        servicio.inicializarB(A, B);*/
+        
+        /*FechaService nuevo = new FechaService();
+        Date fechadeNacimiento = nuevo.fechadeNacimiento();
+        Date fechaActual= nuevo.fechaActual();
+        nuevo.diferencia(fechaActual, fechadeNacimiento);*/
+        
+        PersonaService servicio = new PersonaService();
+        Persona nueva = servicio.crearPersona();
+        servicio.calcularEdad(nueva);
+        System.out.println("Indique la edad respecto de la cual desea saber si la persona es menor:");
+        int edad = leer.nextInt();
+        System.out.println(servicio.menorQue(nueva, edad));
+        servicio.mostrarPersona(nueva);
+        
    }
         
     
