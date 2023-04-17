@@ -9,10 +9,12 @@ import java.util.Date;
 import java.util.Scanner;
 import poo3.objetos.Persona;
 import poo3.objetos.Cadena;
+import poo3.objetos.Curso;
 import poo3.objetos.ParDeNumeros;
 import poo3.servicios.CadenaServicio;
 import poo3.servicios.ParDeNumerosService;
 import poo3.servicios.ArregloServicio;
+import poo3.servicios.CursoService;
 import poo3.servicios.FechaService;
 import poo3.servicios.PersonaService;
 
@@ -86,13 +88,18 @@ public class POO3 {
         Date fechaActual= nuevo.fechaActual();
         nuevo.diferencia(fechaActual, fechadeNacimiento);*/
         
-        PersonaService servicio = new PersonaService();
+        /*PersonaService servicio = new PersonaService();
         Persona nueva = servicio.crearPersona();
         servicio.calcularEdad(nueva);
         System.out.println("Indique la edad respecto de la cual desea saber si la persona es menor:");
         int edad = leer.nextInt();
         System.out.println(servicio.menorQue(nueva, edad));
-        servicio.mostrarPersona(nueva);
+        servicio.mostrarPersona(nueva);*/
+        
+        CursoService servicio = new CursoService();
+        Curso nuevo = servicio.cerarCurso();
+        servicio.calcularGananciaSemanal(nuevo);
+       
         
    }
         
