@@ -10,12 +10,15 @@ import java.util.Scanner;
 import poo3.objetos.Persona;
 import poo3.objetos.Cadena;
 import poo3.objetos.Curso;
+import poo3.objetos.MesSecreto;
 import poo3.objetos.ParDeNumeros;
+import poo3.servicios.AhorcadoService;
 import poo3.servicios.CadenaServicio;
 import poo3.servicios.ParDeNumerosService;
 import poo3.servicios.ArregloServicio;
 import poo3.servicios.CursoService;
 import poo3.servicios.FechaService;
+import poo3.servicios.MesSecretoService;
 import poo3.servicios.PersonaService;
 
 /**
@@ -96,9 +99,16 @@ public class POO3 {
         System.out.println(servicio.menorQue(nueva, edad));
         servicio.mostrarPersona(nueva);*/
         
-        CursoService servicio = new CursoService();
-        Curso nuevo = servicio.cerarCurso();
-        servicio.calcularGananciaSemanal(nuevo);
+        /*CursoService servicio = new CursoService();
+        Curso nuevo = servicio.crearCurso();
+        servicio.calcularGananciaSemanal(nuevo);*/
+        
+        /*MesSecretoService servicio = new MesSecretoService ();
+        MesSecreto nuevo = new MesSecreto();
+        servicio.adivinaMes(nuevo);*/
+        
+        AhorcadoService juego = new AhorcadoService ();
+        juego.juego();
        
         
    }
