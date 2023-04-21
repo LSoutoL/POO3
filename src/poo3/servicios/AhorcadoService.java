@@ -55,15 +55,12 @@ public class AhorcadoService {
     public void longitud (){
         System.out.println("La palabra tiene " + nuevo.getPalabra().length + " letras.");
     }
-    public void buscar (String letra){
+    public int buscar (String letra){
         int contador =0;
-        int resultado=0;
         for (int i = 0; i <nuevo.getPalabra().length; i++) {
             if (nuevo.getPalabra()[i].equals(letra)) {
                 nuevo.setLetras(nuevo.getLetras()+1);
                 contador++;
-                resultado++;
-                
             }
         }
         if (contador==0) {
@@ -71,19 +68,13 @@ public class AhorcadoService {
             } else if (contador>0) {
                System.out.println("La letra es parte de la palabra");
             }
+        return contador;
     }
-    public boolean encontradas (String letra){
-        boolean encontradas = false;
-        for (int i = 0; i <nuevo.getPalabra().length; i++) {
-            if (letra.equals(nuevo.getPalabra()[i])) {
-                encontradas=true;
-            }
-        }
+    public boolean encontradas (int contador){
         System.out.println("Ya fueron encontradas " + nuevo.getLetras() + ". Restan " + (nuevo.getPalabra().length-nuevo.getLetras())+ " letras.");
-    return encontradas;
+    return (contador>0);
     }
-    public int intentos(boolean encontradas){
-        int intentos =0;
+    public int intentos(boolean encontradas, int intentos){
         if (encontradas==false) {
              intentos++;           
         }
@@ -96,10 +87,10 @@ public class AhorcadoService {
         do{
         System.out.println("Adivine una letra");
         String letra = leer.next();
-        buscar (letra);
-        boolean encontradas = encontradas(letra);
+        int contador = buscar (letra);
+        boolean encontradas = encontradas(contador);
         System.out.println(encontradas);
-        intentos +=  intentos (encontradas);
+        intentos =  intentos (encontradas, intentos);
         System.out.println("Le quedan " + (nuevo.getJugadasMax()-intentos)+ " oportunidades.");
     }  while ((nuevo.getLetras()!=nuevo.getPalabra().length) && (intentos < nuevo.getJugadasMax()));
         if ((nuevo.getLetras()==nuevo.getPalabra().length)) {

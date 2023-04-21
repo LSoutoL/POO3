@@ -18,7 +18,7 @@ public class MesSecreto {
     private String MesSecreto;
 
     public MesSecreto() {
-        this.MesSecreto= anio [(int) (Math.random()*12)];
+        MesSecreto= anio [(int) (Math.random()*12)];
     }
 
     public String[] getAnio() {

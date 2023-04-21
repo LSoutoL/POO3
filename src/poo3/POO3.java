@@ -103,12 +103,12 @@ public class POO3 {
         Curso nuevo = servicio.crearCurso();
         servicio.calcularGananciaSemanal(nuevo);*/
         
-        /*MesSecretoService servicio = new MesSecretoService ();
+        MesSecretoService servicio = new MesSecretoService ();
         MesSecreto nuevo = new MesSecreto();
-        servicio.adivinaMes(nuevo);*/
+        servicio.adivinaMes(nuevo);
         
-        AhorcadoService juego = new AhorcadoService ();
-        juego.juego();
+        /*AhorcadoService juego = new AhorcadoService ();
+        juego.juego();*/
        
         
    }
