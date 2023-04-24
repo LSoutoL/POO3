@@ -10,16 +10,20 @@ import java.util.Scanner;
 import poo3.objetos.Persona;
 import poo3.objetos.Cadena;
 import poo3.objetos.Curso;
+import poo3.objetos.Empleado;
 import poo3.objetos.MesSecreto;
 import poo3.objetos.ParDeNumeros;
+import poo3.objetos.Productos;
 import poo3.servicios.AhorcadoService;
 import poo3.servicios.CadenaServicio;
 import poo3.servicios.ParDeNumerosService;
 import poo3.servicios.ArregloServicio;
 import poo3.servicios.CursoService;
+import poo3.servicios.EmpleadoServicio;
 import poo3.servicios.FechaService;
 import poo3.servicios.MesSecretoService;
 import poo3.servicios.PersonaService;
+import poo3.servicios.ProductosServicio;
 
 /**
  *
@@ -103,14 +107,52 @@ public class POO3 {
         Curso nuevo = servicio.crearCurso();
         servicio.calcularGananciaSemanal(nuevo);*/
         
-        MesSecretoService servicio = new MesSecretoService ();
+        /*MesSecretoService servicio = new MesSecretoService ();
         MesSecreto nuevo = new MesSecreto();
-        servicio.adivinaMes(nuevo);
+        servicio.adivinaMes(nuevo);*/
         
         /*AhorcadoService juego = new AhorcadoService ();
         juego.juego();*/
        
+        /*ProductosServicio servicio = new ProductosServicio();
+        int opcion;
+        Productos [] nuevo;
+        do {
+        System.out.println("Indique la accion que desea realizar");
+        System.out.println("1. Agregar un producto");
+        System.out.println("2. Eliminar un producto");
+        System.out.println("3. Buscar un producto");
+        System.out.println("4. Salir");
+        opcion =leer.nextInt();
+        switch (opcion){
+            case 1: nuevo = servicio.agregarProducto();
+            break;
+            case 2: servicio.eliminarProducto();
+            break;
+            case 3 : servicio.buscarProducto();
+            break;
+        }
+    } while (opcion!=4);*/
         
+        /*EmpleadoServicio servicio = new EmpleadoServicio();
+        int opcion;
+        Empleado [] nuevo;
+        do {
+        System.out.println("Indique la accion que desea realizar");
+        System.out.println("1. Agregar un empleado");
+        System.out.println("2. Eliminar un empleado");
+        System.out.println("3. Buscar un empleado");
+        System.out.println("4. Salir");
+        opcion =leer.nextInt();
+        switch (opcion){
+            case 1: nuevo = servicio.agregarEmpleado();
+            break;
+            case 2: servicio.eliminarEmpleado() ;
+            break;
+            case 3: servicio.buscarEmpleado();
+            break;
+        }
+    } while (opcion!=4);*/
    }
         
     

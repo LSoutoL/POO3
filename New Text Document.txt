@@ -1,0 +1,9 @@
+Ejercicio 1: Crear una aplicación de gestión de productos
+Crea una clase llamada Producto que tenga los siguientes atributos: nombre, descripción y precio. 
+Crea una clase llamada ServicioProducto que tenga los siguientes métodos: agregarProducto, eliminarProducto y buscarProducto. 
+Crea una clase llamada Main donde puedas probar los métodos de la clase ServicioProducto.
+
+Ejercicio 2: Crear una aplicación de gestión de empleados
+Crea una clase llamada Empleado que tenga los siguientes atributos: nombre, edad y salario. 
+Crea una clase llamada ServicioEmpleado que tenga los siguientes métodos: agregarEmpleado, eliminarEmpleado y buscarEmpleado. 
+Crea una clase llamada Main donde puedas probar los métodos de la clase ServicioEmpleado.
